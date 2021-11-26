@@ -93,12 +93,12 @@ $fila_mantenciones = mysqli_fetch_assoc($result_mantenciones);
                         <strong>Notebook Disponibles</strong><br>
                         <span><?php echo $fila_noted['total_noted']; ?></span>
                     </p>
-                </a><a href="listado_notebooks.php"><i class="fab fa-windows"></i>
+                </a><a href="listado_windows.php"><i class="fab fa-windows"></i>
                     <p>
                         <strong>Licencias Windows</strong><br>
                         <span><?php echo $fila_licwin['total_licwin']; ?></span>
                     </p>
-                </a><a href="listado_impresoras.php"><i class="far fa-file-word"></i>
+                </a><a href="listado_office.php"><i class="far fa-file-word"></i>
                     <p>
                         <strong>Licencias Office</strong><br>
                         <span><?php echo $fila_licoffice['total_licoffice']; ?></span>
@@ -114,9 +114,7 @@ $fila_mantenciones = mysqli_fetch_assoc($result_mantenciones);
         </div>
 	</section>
     <section id="container">
-        <div class="divContainer">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, eum natus corporis, ad alias officia laudantium voluptatem dignissimos praesentium vitae, asperiores eos veritatis magni autem quibusdam deleniti beatae consequatur architecto.</p>
-        </div>
+       
     </section>
         
 <?php include "includes/footer.php";	?>
