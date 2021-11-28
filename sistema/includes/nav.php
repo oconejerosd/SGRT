@@ -93,6 +93,7 @@
 						
 						<li><a href="listado_perfiles_sgrt.php">Perfiles SGRT </a></li>
 						<li><a href="cambiar_contrasena.php">Cambiar mi Contraseña </a></li>
+						<li><a href="respaldo_sgrt.php">Respaldo y Restauración </a></li>
 					</ul>
 				</li>
 				<?php } ?>

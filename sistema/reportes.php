@@ -35,7 +35,7 @@ $fila_noted = mysqli_fetch_assoc($result_noted);
         <div>
             <h1 class="titlePanelControl" align="center"><i class="fas fa-tachometer-alt"></i> Panel de Reportes SGRT</h1>
         </div>
-        <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="row row-cols-1 row-cols-md-3 g-2">
         <div class="col">
             <div class="card h-100">
                 <br>
@@ -89,30 +89,63 @@ $fila_noted = mysqli_fetch_assoc($result_noted);
             </div>
         </div>
         </div>
-    </section>
-    
+    </section>   
+
     <div class="container">
-    <table class="table table-striped table-hover">
-   <thead class="thead-green">
-    <tr>
-     <th width="70%">REPORTES</th>
-     <th>EXCEL</th>
-     <th>PDF</th>
-    </tr>
-   </thead>
-   <tbody>
-    <tr>
-        <td>Listado de Funcionarios</td>
-        <td><a href="excel_fun.php"><i class="far fa-file-excel"></i></a></td>
-        <td><a href="#"></a> <i class="fas fa-file-pdf"></i></td>
-    </tr>
-    <tr>
-        <td>Listado de Funcionarios</td>
-        <td><a href="excel_fun.php"><i class="far fa-file-excel"></i></a></td>
-        <td><a href="#"></a> <i class="fas fa-file-pdf"></i></td>
-    </tr>
-   </tbody>
-  </table>
+        <table class="table table-striped table-hover">
+            <thead class="thead-green">
+                <tr>
+                <th width="70%">REPORTES</th>
+                <th>EXCEL</th>
+                <th>PDF</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Listado de Funcionarios</td>
+                    <td><a href="excel_fun.php"><i class="far fa-file-excel"></i></a></td>
+                    <td><a href="#"></a> <i class="fas fa-file-pdf"></i></td>
+                </tr>
+                <tr>
+                    <td>Listado de Funcionarios</td>
+                    <td><a href="excel_fun.php"><i class="far fa-file-excel"></i></a></td>
+                    <td><a href="#"></a> <i class="fas fa-file-pdf"></i></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+    <div class="container">
+    <a href="./Backup.php">Realizar copia de seguridad</a>
+	<form action="./Restore.php" method="POST">
+		<label>Selecciona un punto de restauración</label><br>
+            <select name="restorePoint">
+                <option value="" disabled="" selected="">Selecciona un punto de restauración</option>
+                <?php
+                    include_once '../Connet.php';
+                    $ruta=BACKUP_PATH;
+                    if(is_dir($ruta)){
+                        if($aux=opendir($ruta)){
+                            while(($archivo = readdir($aux)) !== false){
+                                if($archivo!="."&&$archivo!=".."){
+                                    $nombrearchivo=str_replace(".sql", "", $archivo);
+                                    $nombrearchivo=str_replace("-", ":", $nombrearchivo);
+                                    $ruta_completa=$ruta.$archivo;
+                                    if(is_dir($ruta_completa)){
+                                    }else{
+                                        echo '<option value="'.$ruta_completa.'">'.$nombrearchivo.'</option>';
+                                    }
+                                }
+                            }
+                            closedir($aux);
+                        }
+                    }else{
+                        echo $ruta." No es ruta válida";
+                    }
+                ?>
+            </select>
+		<button type="submit" >Restaurar</button>
+	</form>
     </div>
 <?php include "includes/footer.php";	?>
 </body>
