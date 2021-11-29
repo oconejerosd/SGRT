@@ -8,7 +8,7 @@ error_reporting(E_PARSE);
  const SERVER = "localhost"; 
 
 //Nombre de la base de datos
-const BD = "bd_sgrt";
+const BD = "wsgrt";
 
 //Contraseña de myqsl
 const PASS = "";
@@ -27,7 +27,7 @@ class SGBD{
     //Funcion para hacer consultas a la base de datos
     public static function sql($query){
         $con=mysqli_connect(SERVER, USER, PASS, BD);
-        mysqli_set_charset($con, "utf8");
+        mysqli_set_charset($con, "utf8_general_ci");
         if (mysqli_connect_errno()) {
             printf("Conexion fallida: %s\n", mysqli_connect_error());
             exit();

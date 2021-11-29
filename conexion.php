@@ -2,7 +2,7 @@
     $host = 'localhost';
     $user = 'root';
     $password = '';
-    $db = 'bd_sgrt';
+    $db = 'wsgrt';
 
     $conection = @mysqli_connect($host,$user,$password,$db);
 

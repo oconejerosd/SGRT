@@ -19,7 +19,7 @@ include "../conexion.php";
 <?php include "includes/header.php";	?>
 <section id="container">
         <div>
-            <h1 class="titlePanelControl" align="center"><i class="fas fa-tachometer-alt"></i> Respaldo y Restauración BD SGRT</h1>
+            <h1 class="titlePanelControl" align="center"> Respaldo y Restauración BD SGRT</h1>
         </div>
         <div class="row row-cols-1 row-cols-md-3 g-2">
             <div class="col">
