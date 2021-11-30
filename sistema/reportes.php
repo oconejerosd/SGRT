@@ -2,12 +2,7 @@
 session_start();
 include "../conexion.php";
 
-$query_dash = mysqli_query($conection,"CALL dataDashboard();");
-$result_dash = mysqli_num_rows($query_dash);
-if($result_dash > 0){
-    $data_dash = mysqli_fetch_assoc($query_dash);
-    mysqli_close($conection);
-}
+
 include "../conexion.php";
 // NOTEBOOK ASIGNADOS
 $sql_notea = "SELECT COUNT(*) total_notea FROM equipos WHERE id_tipe = 1 and estatus_equ = 1 and asig_equ=1";
@@ -114,38 +109,6 @@ $fila_noted = mysqli_fetch_assoc($result_noted);
             </tbody>
         </table>
 
-    </div>
-    <div class="container">
-    <a href="./Backup.php">Realizar copia de seguridad</a>
-	<form action="./Restore.php" method="POST">
-		<label>Selecciona un punto de restauración</label><br>
-            <select name="restorePoint">
-                <option value="" disabled="" selected="">Selecciona un punto de restauración</option>
-                <?php
-                    include_once '../Connet.php';
-                    $ruta=BACKUP_PATH;
-                    if(is_dir($ruta)){
-                        if($aux=opendir($ruta)){
-                            while(($archivo = readdir($aux)) !== false){
-                                if($archivo!="."&&$archivo!=".."){
-                                    $nombrearchivo=str_replace(".sql", "", $archivo);
-                                    $nombrearchivo=str_replace("-", ":", $nombrearchivo);
-                                    $ruta_completa=$ruta.$archivo;
-                                    if(is_dir($ruta_completa)){
-                                    }else{
-                                        echo '<option value="'.$ruta_completa.'">'.$nombrearchivo.'</option>';
-                                    }
-                                }
-                            }
-                            closedir($aux);
-                        }
-                    }else{
-                        echo $ruta." No es ruta válida";
-                    }
-                ?>
-            </select>
-		<button type="submit" >Restaurar</button>
-	</form>
     </div>
 <?php include "includes/footer.php";	?>
 </body>

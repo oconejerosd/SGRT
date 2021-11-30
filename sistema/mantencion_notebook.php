@@ -38,7 +38,7 @@ include "../conexion.php";
             ON e.id_mar = m.id_mar 
             INNER JOIN modelo mo
             ON e.id_mod = mo.id_mod
-            WHERE e.id_tipe = 1 AND estatus_equ = 1 AND asig_equ = 0";
+            WHERE e.id_tipe = 1 AND estatus_equ = 1";
 
             $sql_query = mysqli_query($conection,$SQL_READ);	
         ?>

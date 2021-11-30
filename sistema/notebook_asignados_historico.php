@@ -35,7 +35,7 @@ include "../conexion.php";
             INNER JOIN marcas m ON m.id_mar = e.id_mar 
             INNER JOIN modelo mo ON mo.id_mod = e.id_mod 
             INNER JOIN tipos_equipos te ON te.id_tipe = e.id_tipe 
-            WHERE  a.estatus_asignacion = 0";
+            WHERE  a.estatus_asignacion = 1";
 
             $sql_query = mysqli_query($conection,$SQL_READ);	
         ?>

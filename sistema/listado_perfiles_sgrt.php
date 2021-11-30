@@ -21,7 +21,7 @@ include "../conexion.php";
 <?php include "includes/header.php";	?>
 	<section id="container">
 		<h1>Perfiles SGRT</h1>
-        <a href="registro_perfil.php" class="btn_new">Crear Perfil</a>
+        <a href="#" class="btn_new">Crear Perfil</a>
         
         <table>
             <tr>
