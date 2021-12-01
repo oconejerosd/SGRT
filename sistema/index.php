@@ -73,9 +73,9 @@ $fila_mantenciones = mysqli_fetch_assoc($result_mantenciones);
 <?php include "includes/header.php";	?>
 	<section id="container">
         <div class="divContainer">
-            <div>
-                <h1 class="titlePanelControl"><i class="fas fa-tachometer-alt"></i> Panel de Control SGRT</h1>
-            </div>
+            <div><br>
+                <h1 class="titlePanelControl" align="center"><i class="fas fa-tachometer-alt"></i> PANEL DE CONTROL SGRT</h1>
+            </div><br>
             <div class="dashboard">
                 <a href="lista_funcionarios.php"><i class="fas fa-users"></i>
                     <p>
@@ -105,7 +105,7 @@ $fila_mantenciones = mysqli_fetch_assoc($result_mantenciones);
                         <span><?php echo $fila_pro['total_pro']; ?></span>
                     </p>
                 </a>
-            </div><br>
+            </div><br><br>
             <div class="dashboard">
                 <a href="notebook_asignados.php"><i class="fas fa-laptop"></i>
                     <p>

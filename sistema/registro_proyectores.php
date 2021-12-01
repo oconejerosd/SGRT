@@ -37,7 +37,7 @@
 				('$serie', '$fadquisicion','$garantia', '$usuarioi', '$passi', '$ip', 4 , '$marca', '$modelo','$departamento','$idrole');");
 				
 				if($query_insert){
-					$alert ='<p class="msg_save">La impresora ha sido ingresada</p>';
+					$alert ='<p class="msg_save">El proyector ha sido ingresada</p>';
 				}else{
 					$alert ='<p class="msg_error">Error al crear el equipo.</p>';
 				}

@@ -29,7 +29,7 @@ include "../conexion.php";
                 $buscar = $_POST['buscar'];
             }
             $buscar = $_POST['buscar'];
-            $SQL_READ = "SELECT t.nom_tipe, e.ser_equ, m.fingreso_mantencion, m.tipo_mantencion, d.nom_depto FROM mantencion m 
+            $SQL_READ = "SELECT t.nom_tipe, e.ser_equ, m.fingreso_mantencion,m.detalle_mantencion, m.tipo_mantencion, d.nom_depto FROM mantencion m 
             INNER JOIN equipos e
             ON m.id_equ = e.id_equ
             INNER JOIN tipos_equipos t 
@@ -51,6 +51,7 @@ include "../conexion.php";
                                 <th>TIPO EQUIPO</th>
                                 <th>SERIE EQUIPO</th>
                                 <th>FECHA MANTENCIÓN</th>
+                                <th>DETALLE</th>
                                 <th>TIPO MANTENCION</th>
                                 <th>UBICACION EQUIPO</th>
                             </tr>
@@ -62,6 +63,7 @@ include "../conexion.php";
                                     <td><?= $row['nom_tipe']?></td>
                                     <td><?= $row['ser_equ']?></td>
                                     <td><?= $row['fingreso_mantencion']?></td>
+                                    <td><?= $row['detalle_mantencion']?></td>
                                     <td><?= $row['tipo_mantencion']?></td>
                                     <td><?= $row['nom_depto']?></td>
                                 </tr>
@@ -71,7 +73,7 @@ include "../conexion.php";
             </div>
 		</div>
 	</div>
-    <a href="excel_fun.php">Descargar Excel </a>
+  
    
 <!-- jQuery, Popper.js, Bootstrap JS -->
     <script src="jquery/jquery-3.3.1.min.js"></script>

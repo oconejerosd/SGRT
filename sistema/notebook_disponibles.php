@@ -77,7 +77,7 @@ include "../conexion.php";
             </div>
 		</div>
 	</div><br>
-    <a href="excel_fun.php">Descargar Excel Notebook Disponibles </a> <br>
+    <a href="excel_notedisp.php">Descargar Excel Notebook Disponibles </a> <br>
     <a href="./formatos/FORMATO_COMODATO.docx">Descargar Formato Tipo Comodato </a>
    
 <!-- jQuery, Popper.js, Bootstrap JS -->

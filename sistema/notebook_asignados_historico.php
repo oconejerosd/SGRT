@@ -88,8 +88,7 @@ include "../conexion.php";
             </div>
 		</div>
 	</div><br>
-    <a href="excel_notebook_asignados.php">Descargar Excel Listado Asignaciones </a><br>
-    <a href="./formatos/RECEPCIÓN_EQUIPAMIENTO_COMODATO.docx">Descargar Formato Tipo Devolución Comodato </a>
+   
    
 <!-- jQuery, Popper.js, Bootstrap JS -->
     <script src="jquery/jquery-3.3.1.min.js"></script>

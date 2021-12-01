@@ -77,7 +77,7 @@ include "../conexion.php";
             </div>
 		</div>
 	</div>
-    <a href="excel_fun.php">Descargar Excel </a>
+  
    
 <!-- jQuery, Popper.js, Bootstrap JS -->
     <script src="jquery/jquery-3.3.1.min.js"></script>

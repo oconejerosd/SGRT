@@ -87,7 +87,7 @@ include "../conexion.php";
             </div>
 		</div>
 	</div><br>
-    <a href="excel_fun.php">Descargar Excel Listado Computadores </a>
+    <a href="excel_aio.php">Descargar Excel Listado Computadores </a>
    
 <!-- jQuery, Popper.js, Bootstrap JS -->
     <script src="jquery/jquery-3.3.1.min.js"></script>

@@ -37,7 +37,7 @@
 				$sql_est_mant = mysqli_query($conection,"UPDATE equipos 
 														 SET mant_equ = '1' 
 														 WHERE id_equ ='$idNote'");
-				header('location:listado_eq_mantencion.php');
+				header('location:reporte_mant_impresoras.php');
 			}else{
 				
 				$alert ='<p class="msg_error">Error al ingresar mantención.</p>';

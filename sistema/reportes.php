@@ -27,11 +27,11 @@ $fila_noted = mysqli_fetch_assoc($result_noted);
 <body>
 <?php include "includes/header.php";?>
     <section id="container">
-        <div>
-            <h1 class="titlePanelControl" align="center"><i class="fas fa-tachometer-alt"></i> Panel de Reportes SGRT</h1>
+        <div><br>
+            <h1 class="titlePanelControl" align="center"><i class="fas fa-tachometer-alt"></i> Panel de Reportes SGRT</h1><br>
         </div>
         <div class="row row-cols-1 row-cols-md-3 g-2">
-        <div class="col">
+        <div class="col"><br><br>
             <div class="card h-100">
                 <br>
                 <div class="dashboard">
@@ -44,7 +44,7 @@ $fila_noted = mysqli_fetch_assoc($result_noted);
                 </div>
             </div>
         </div>
-        <div class="col">
+        <div class="col"><br><br>
             <div class="card h-100">
             <br>
                 <div class="dashboard">
@@ -57,7 +57,7 @@ $fila_noted = mysqli_fetch_assoc($result_noted);
                     </div>
             </div>
         </div>
-        <div class="col">
+        <div class="col"><br><br>
             <div class="card h-100">
             <br>
                 <div class="dashboard">
@@ -70,7 +70,7 @@ $fila_noted = mysqli_fetch_assoc($result_noted);
             </div>
             </div>
         </div>
-        <div class="col">
+        <div class="col"><br><br>
             <div class="card h-100">
             <br>
                 <div class="dashboard">
@@ -85,29 +85,9 @@ $fila_noted = mysqli_fetch_assoc($result_noted);
         </div>
         </div>
     </section>   
-
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <div class="container">
-        <table class="table table-striped table-hover">
-            <thead class="thead-green">
-                <tr>
-                <th width="70%">REPORTES</th>
-                <th>EXCEL</th>
-                <th>PDF</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Listado de Funcionarios</td>
-                    <td><a href="excel_fun.php"><i class="far fa-file-excel"></i></a></td>
-                    <td><a href="#"></a> <i class="fas fa-file-pdf"></i></td>
-                </tr>
-                <tr>
-                    <td>Listado de Funcionarios</td>
-                    <td><a href="excel_fun.php"><i class="far fa-file-excel"></i></a></td>
-                    <td><a href="#"></a> <i class="fas fa-file-pdf"></i></td>
-                </tr>
-            </tbody>
-        </table>
+       
 
     </div>
 <?php include "includes/footer.php";	?>

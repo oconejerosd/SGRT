@@ -4,6 +4,7 @@ header("Content-Type: application/xls");
 header("Content-Disposition: attachment; filename= listado_note_asignados.xls");
 
 ?>
+
 <table>
             <tr>
                 <th>ID</th>
