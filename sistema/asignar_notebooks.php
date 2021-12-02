@@ -20,7 +20,7 @@
 			//------------------ SUBIR ARCHIVO COMODATO ---------//
 			$docuasignacion = "/sistema/comodatos/asig-".strtotime("now")."-".$_FILES['docuasignacion']['name'];
 			$docuasignacion_temp = $_FILES['docuasignacion']['tmp_name'];
-			$route = $_SERVER['DOCUMENT_ROOT'] ."/cormun/SGRT".$docuasignacion;
+			$route = $_SERVER['DOCUMENT_ROOT'] ."/INACAP/SGRT".$docuasignacion;
 			move_uploaded_file($docuasignacion_temp,$route);
 			//------------------ FIN SUBIR ARCHIVO COMODATO -------//
 			

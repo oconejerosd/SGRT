@@ -19,9 +19,9 @@
 			$dobservacion = $_POST['dobservacion'];
 
 			//$docuasignacion = $_FILES['docuasignacion']['name'];
-			$docudevolucion = "/sistema/dev_comodato/asig-".strtotime("now")."-".$_FILES['docudevolucion']['name'];
+			$docudevolucion = "/INACAP/dev_comodato/asig-".strtotime("now")."-".$_FILES['docudevolucion']['name'];
 			$docudevolucion_temp = $_FILES['docudevolucion']['tmp_name'];
-			$route = $_SERVER['DOCUMENT_ROOT'] ."/cormun/SGRT".$docudevolucion;
+			$route = $_SERVER['DOCUMENT_ROOT'] ."/INACAP/SGRT".$docudevolucion;
 
 			move_uploaded_file($docudevolucion_temp,$route);
 

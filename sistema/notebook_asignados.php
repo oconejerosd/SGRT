@@ -68,7 +68,7 @@ include "../conexion.php";
                                     <td><?= $row['nom_mar']?></td>
                                     <td><?= $row['nom_mod']?></td>
                                     <td>
-                                         <a class ="link_edit" target="_blank" href="/cormun/sgrt<?php echo $row["carta_asignacion"]  ?>"><i class="fa fa-download" aria-hidden="true"></i></a>
+                                         <a class ="link_edit" target="_blank" href="/INACAP/sgrt<?php echo $row["carta_asignacion"]  ?>"><i class="fa fa-download" aria-hidden="true"></i></a>
                                     </td>
                                     <td>
                                          <a class ="link_edit" href="devolver_notebook.php?id=<?php echo $row["id_asignacion"]  ?>"><i class="fas fa-edit"></i> Devolver</a>

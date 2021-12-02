@@ -69,7 +69,7 @@ include "../conexion.php";
                                     <td><?= $row['nom_mod']?></td>
                                     <td><?= $row['ser_equ']?></td>
                                     <td>
-                                         <a class ="link_edit" href="/cormun/sgrt<?php echo $row["carta_asignacion"]  ?>"><i class="fa fa-download" aria-hidden="true"></i></a>
+                                         <a class ="link_edit" href="/INACAP/sgrt<?php echo $row["carta_asignacion"]  ?>"><i class="fa fa-download" aria-hidden="true"></i></a>
                                     </td>
                                 </tr>
                             <?php } ?>
